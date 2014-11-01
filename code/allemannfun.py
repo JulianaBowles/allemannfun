@@ -7,7 +7,7 @@ import argparse
 import markdown
 import codecs
 from collections import OrderedDict
-       
+
 class MenuItem(object):
     def __init__(self,name="",target="#"):        
         self.target = target
@@ -83,7 +83,8 @@ class AllemannFun(object):
 
     def __init__(self,name,menu="",template="allemannfun.template"):
         data = self.loadFile(name)
-        data['contents'] = markdown.markdown(data['contents'])
+        md = markdown.Markdown(extensions=['squareul'])
+        data['contents'] = md.convert(data['contents'])
         data['date'] = time.ctime(os.path.getmtime(name))
         data['menu'] = menu
         self.template = Template(file="allemannfun.template",searchList=(data,))
