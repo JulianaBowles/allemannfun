@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="de"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="de"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="de"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="de"> <!--<![endif]-->
+  <HEAD>
+    <TITLE>Allemann Fun - deutsche Samstagsschule - $title</TITLE>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="$author">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <!--[if lt IE 9]>
+        <script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+  </HEAD>
+  <BODY>
+    <div class="container">
+      <p align="center"><img src="images/AF-logo-deutsch150dpi.gif" height=182></p>
+      <p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
+      <div class="two columns sidebar">
+	<p align="center">$menu</p>
+      </div>
+
+      <div class="twelve columns offset-by-one content">
+	<header>
+	  <h1>$title</h1>
+	</header>
+        <hr class="large" />
+	$contents
+
+	<p align="center">last edited by $author $date</p>
+      </div>
+  </BODY>
+</HTML>
