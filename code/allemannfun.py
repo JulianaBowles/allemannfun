@@ -7,6 +7,7 @@ import argparse
 import markdown
 import codecs
 from collections import OrderedDict
+from BeautifulSoup import BeautifulSoup
 
 class MenuItem(object):
     def __init__(self,name="",target="#"):        
@@ -129,7 +130,8 @@ if __name__ == '__main__':
         t = os.path.splitext(h)[0]+'.txt'
         if os.path.exists(t):
             with open(os.path.join(args.output_dir,h),'w') as out:
-                out.write(str(AllemannFun(t,menu=menu.unicode(),template=args.template)))
+                bs = BeautifulSoup(str(AllemannFun(t,menu=menu.unicode(),template=args.template)))
+                out.write(bs.prettify())
 
     #with codecs.open('test2.html','w', encoding='utf-8') as out:
     #    out.write(menu.unicode())
