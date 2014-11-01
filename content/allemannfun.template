@@ -18,21 +18,40 @@
     <![endif]-->
   </HEAD>
   <BODY>
-    <div class="container">
-      <p align="center"><img src="images/AF-logo-deutsch150dpi.gif" height=182></p>
-      <p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
-      <div class="two columns sidebar">
-	<p align="center">$menu</p>
-      </div>
+    <div class="band header">
+      <header class="container">
+	<div class="sixteen columns">
+	  <p align="center"><img src="images/AF-logo-deutsch150dpi.gif" height=182></p>
+	  <p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
+	</div>
+       </header> <!-- end container -->
+    </div> <!--end band-->
 
-      <div class="twelve columns offset-by-one content">
-	<header>
-	  <h1>$title</h1>
-	</header>
-        <hr class="large" />
-	$contents
+      <div class="band navigation">
+	<nav class="container">
+	  <div class="sixteen columns">
+   	    $menu
+	  </div>
+	</nav> <!-- end container -->
+      </div> <!--end band-->
 
-	<p align="center">last edited by $author $date</p>
-      </div>
+      <div class="band">
+	<div class="container">
+	  <div class="sixteen columns content">
+	    <h1>$title</h1>
+            <hr class="large" />
+	    $contents
+	  </div>
+	</div> <!-- end container -->
+      </div> <!--end band-->
+
+      <div class="band footer">
+	<div class="container">
+	  <div class="sixteen columns">
+	    <p align="center">last edited by $author $date</p>
+	  </div>
+	</div> <!-- end container -->
+      </div> <!--end band-->
+      <div class="resize"></div>
   </BODY>
 </HTML>

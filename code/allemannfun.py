@@ -70,9 +70,9 @@ class Menu(object):
 
     def unicode(self):
         
-        s = unicode("<nav><ul>\n")
+        s = unicode("<ul>\n")
         s += self._menu.unicode()
-        s += "</ul></nav>\n"
+        s += "</ul>\n"
         return s
 
     def getTargets(self):

@@ -1,1 +1,6 @@
 index.html: Home
+: Über uns
+: Über uns/Bilder
+: Links
+: Kontakte
+: Kontakte/Anmeldung
