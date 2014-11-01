@@ -1,0 +1,11 @@
+#title: Kontakte
+#author: Magnus Hagdorn
+Das Elternkommitee besteht zur Zeit aus:
+
+* **Vorstand (Chair)**: Fabian Hilfrich
+* **Schriftführer (Secretary)**: Markus Heine
+* **Schatzmeister (Treasurer)**: Andreas Grothey
+* **Anmeldungen (Registration)**: Margaret Ries
+* Sowie Carola Eyber, Anne Ajilogba, Stephan Eisenhardt, Konstanze McLeod, Katharina Skwara, Juliane Holfeld, Christine Horsch und Ursula Busch.
+
+email: [allemannfun@arcor.de](mailto:allemannfun@arcor.de)

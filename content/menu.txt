@@ -1,6 +1,6 @@
 index.html: Home
-: Über uns
+lorem.html: Über uns
 : Über uns/Bilder
-: Links
-: Kontakte
-: Kontakte/Anmeldung
+links.html: Links
+kontakte.html: Kontakte
+anmeldung.html: Kontakte/Anmeldung
