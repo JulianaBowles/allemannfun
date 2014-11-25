@@ -41,6 +41,14 @@ nav ul,
 nav ul li {
     margin: 0px;
 }
+
+nav select {
+    display: none;
+    width: 100%;
+    height: 28px;
+    margin: 21px 0;
+}
+
 nav ul li {
     display: inline;
     float: left;
@@ -121,7 +129,14 @@ nav ul li:hover > a {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+	    nav select {
+		display: block;
+	    }
+	    nav ul {
+		display: none;
+	    }
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}

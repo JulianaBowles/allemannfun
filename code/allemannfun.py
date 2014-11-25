@@ -47,6 +47,19 @@ class MenuItem(object):
             s += "</li>\n"
         return s
 
+    def select(self,depth=0):
+        s = unicode("")
+        if self.name != "":
+            s+="<option value=\"%s\" >%s %s</option>\n"%(self.target,depth*"-",self.name)
+            d=1
+        else:
+            d=0
+        if len(self.children)>0:
+            for n in self.children:
+                s += self.children[n].select(depth=depth+d)
+        return s
+
+        
     def getTargets(self):
         for n in self.children:
             for t in self.children[n].getTargets():
@@ -73,6 +86,12 @@ class Menu(object):
         s = unicode("<ul>\n")
         s += self._menu.unicode()
         s += "</ul>\n"
+        # the select box
+        s += "<form name=\"menuform\">\n"
+        s += "<select name=\"menu2\" onChange=\"top.location.href = this.form.menu2.options[this.form.menu2.selectedIndex].value; return false;\">\n"
+        s += "<option value=\"\" selected=\"selected\">Goto ...</option>\n"
+        s += self._menu.select()
+        s += "</select></form>\n"
         return s
 
     def getTargets(self):
