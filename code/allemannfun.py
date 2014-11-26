@@ -8,6 +8,7 @@ import markdown
 import codecs
 from collections import OrderedDict
 from BeautifulSoup import BeautifulSoup
+import calendar
 
 class MenuItem(object):
     def __init__(self,name="",target="#"):        
@@ -103,12 +104,15 @@ class AllemannFun(object):
 
     def __init__(self,name,menu="",template="allemannfun.template"):
         data = self.loadFile(name)
-        md = markdown.Markdown(extensions=['squareul'])
-        data['contents'] = md.convert(data['contents'])
+        data['contents'] = self.process(data)
         data['date'] = time.ctime(os.path.getmtime(name))
         data['menu'] = menu
         self.template = Template(file="allemannfun.template",searchList=(data,))
 
+    def process(self,data):
+        md = markdown.Markdown(extensions=['squareul'])
+        return md.convert(data['contents'])
+        
     def loadFile(self,name):
         data = {"contents":""}
         for k in self.KEYS:
@@ -131,6 +135,70 @@ class AllemannFun(object):
     def __str__(self):
         return str(self.template)
 
+class Kalender(AllemannFun):
+    KEYS = ['title','author','year']
+
+    def process(self,data):
+
+        DAYS = "MDMDFSS"
+        MONTHS = ["Januar","Februar",u'M\xe4rz',"April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]
+        year = int(data['year'])
+        dates = {}
+        for line in data['contents'].split('\n'):
+            line = line.strip()
+            if len(line)>0:
+                dates[line[:10]] = line[10:].strip()
+                
+        cal = calendar.Calendar()
+
+        s = unicode("</div>\n")
+
+        for m in range(0,12):
+            cm = (m+7)%12+1
+            cy = (m+7)//12+year
+            s += "<div align =\"center\" class=\"four columns\">\n"
+            s += "<table class=\"cal\">\n"
+            # the month
+            s += "<tr><th colspan=\"7\">%s %d</th></tr>\n"%(MONTHS[cm-1],cy)
+            # the days of the week
+            s += "<tr>"
+            for d in DAYS:
+                s+="<th>%s</th>"%d
+            s += "</tr>\n"
+            # loop over the days in the month
+            alldays = 0
+            for md,wd in calendar.Calendar().itermonthdays2(cy,cm):
+                if alldays%7==0:
+                    s+="<tr>"
+                k= "%02d-%02d-%d"%(md,cm,cy)
+                if k in dates:
+                    if dates[k]=="":
+                        extra=' class="afday"'
+                    else:
+                        extra=' class="afspecial" title=\"%s\"'%(dates[k])
+                else:
+                    extra=''
+                    #print k,dates[k]
+                s+="<td%s>"%extra
+                if md!=0:
+                    s+="%d"%md
+                s+="</td>"
+                if alldays%7==6:
+                    s+="</tr>\n"
+                alldays+=1
+                
+            s += "</table>\n"
+            s += "</div>\n"
+        
+        
+        #for md,wd in calendar.Calendar().itermonthdays2(2014,12):
+        #    print md,wd
+
+        s += "<div class=\"sixteen columns content\">"
+        return s
+    
+
+    
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
@@ -148,8 +216,12 @@ if __name__ == '__main__':
     for h in menu.getTargets():
         t = os.path.splitext(h)[0]+'.txt'
         if os.path.exists(t):
+            if t == 'kalender.txt':
+                page = Kalender(t,menu=menu.unicode(),template=args.template)
+            else:
+                page = AllemannFun(t,menu=menu.unicode(),template=args.template)
             with open(os.path.join(args.output_dir,h),'w') as out:
-                bs = BeautifulSoup(str(AllemannFun(t,menu=menu.unicode(),template=args.template)))
+                bs = BeautifulSoup(str(page))
                 out.write(bs.prettify())
 
     #with codecs.open('test2.html','w', encoding='utf-8') as out:

@@ -1,6 +1,7 @@
 index.html: Home
 lorem.html: Über uns
 : Über uns/Bilder
+kalender.html: Über uns/Kalender
 links.html: Links
 kontakte.html: Kontakte
 anmeldung.html: Kontakte/Anmeldung

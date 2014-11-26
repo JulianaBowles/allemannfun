@@ -116,6 +116,34 @@ nav ul li:hover > a {
     background: #424242;
 }
 
+table.cal {
+    margin-bottom: 28px;
+}
+
+table.cal th {
+    background: #343434;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+}
+
+table.cal td {
+    border: 1px solid #343434;
+    border-collapse: collapse;
+}
+
+table.cal td.afday{
+    background: #99E699;
+}
+
+table.cal td.afspecial{
+    background: #009933;
+}
+
+table.cal th,td {
+    padding: 5px;
+}
+
 /* #Page Styles
 ================================================== */
 
