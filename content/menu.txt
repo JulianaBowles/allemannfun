@@ -1,6 +1,7 @@
 index.html: Home
 ueberuns.html: Über uns
-lorem.html: Über uns/Bilder
+geschichte.html: Über uns/Geschichte
+: Über uns/Bilder
 kalender.html: Über uns/Kalender
 links.html: Links
 kontakte.html: Kontakte
