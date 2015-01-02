@@ -31,9 +31,19 @@
     background: #343434;
 }
 
+.band.content {
+    overflow: auto;
+    padding-bottom: 28px; 
+}
+
 .band.footer {
     background: #343434;
     color: #e0e0e0;
+    height: 28px;
+    bottom: 0px;
+    position: fixed;
+    clear: both;
+    width: 100%;
 }
 
 /* navigation */
