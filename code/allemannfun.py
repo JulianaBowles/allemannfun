@@ -9,6 +9,11 @@ import codecs
 from collections import OrderedDict
 from BeautifulSoup import BeautifulSoup
 import calendar
+import string
+import Image
+
+WIDTHS = {'l':800,'m':400,'s':200}
+MEDIA = {'l':'1000px','m':'480'}
 
 class MenuItem(object):
     def __init__(self,name="",target="#"):        
@@ -100,9 +105,10 @@ class Menu(object):
             yield t
 
 class AllemannFun(object):
-    KEYS = ['title','author']
+    KEYS = ['title','author','type']
 
-    def __init__(self,name,menu="",template="allemannfun.template"):
+    def __init__(self,name,menu="",template="allemannfun.template",outdir=None):
+        self.outdir = outdir
         data = self.loadFile(name)
         data['contents'] = self.process(data)
         data['date'] = time.ctime(os.path.getmtime(name))
@@ -110,8 +116,36 @@ class AllemannFun(object):
         self.template = Template(file="allemannfun.template",searchList=(data,))
 
     def process(self,data):
-        md = markdown.Markdown(extensions=['squareul'])
-        return md.convert(data['contents'])
+        res = ''
+        if data['type'] == 'Bilder':
+            outdir = os.path.join(self.outdir,'images')
+            res = unicode("</div>\n")
+            for line in data['contents'].split('\n'):
+                l = line.split()
+                if len(l) > 0:
+                    img = l[0]
+                    caption = string.join(l[1:])
+                    if not os.path.isfile(img):
+                        print 'Error, cannot find image %s'%img
+                        continue
+                    res += "<div align =\"center\" class=\"sixteen columns\">\n<picture>\n"
+                    bname = os.path.splitext(os.path.basename(img))[0]
+                    for w in WIDTHS:
+                        outim = os.path.join(outdir,bname+'_'+w+'.jpg')
+                        if not os.path.isfile(outim):
+                            im = Image.open(img)
+                            a = float(im.size[1])/float(im.size[0])
+                            im.thumbnail((WIDTHS[w],WIDTHS[w]*a),Image.ANTIALIAS)
+                            im.save(outim, "JPEG")
+                    for w in MEDIA:
+                        res += '<source srcset="%s" media="(min-width: %s)">\n'%(os.path.join("images",bname+'_'+w+'.jpg'),MEDIA[w])
+                    res += '<img srcset="%s" alt="%s">\n'%(os.path.join("images",bname+'_s'+'.jpg'),caption)
+                        
+                    res += "</picture>\n</div>\n"
+        else:
+            md = markdown.Markdown(extensions=['squareul'])
+            res = md.convert(data['contents'])
+        return res
         
     def loadFile(self,name):
         data = {"contents":""}
@@ -219,10 +253,11 @@ if __name__ == '__main__':
             if t == 'kalender.txt':
                 page = Kalender(t,menu=menu.unicode(),template=args.template)
             else:
-                page = AllemannFun(t,menu=menu.unicode(),template=args.template)
+                page = AllemannFun(t,menu=menu.unicode(),template=args.template,outdir=args.output_dir)
             with open(os.path.join(args.output_dir,h),'w') as out:
                 bs = BeautifulSoup(str(page))
                 out.write(bs.prettify())
+                #out.write(str(page))
 
     #with codecs.open('test2.html','w', encoding='utf-8') as out:
     #    out.write(menu.unicode())

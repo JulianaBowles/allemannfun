@@ -1,0 +1,8 @@
+#title: Weihnachtsfeier 2014
+#author: Magnus Hagdorn
+#type: Bilder
+images/weihnachten2014_1.jpg
+images/weihnachten2014_2.jpg
+images/weihnachten2014_3.jpg
+images/weihnachten2014_4.jpg
+images/weihnachten2014_5.jpg

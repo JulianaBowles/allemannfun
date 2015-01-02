@@ -1,0 +1,6 @@
+#title: Fasching 2014
+#author: Magnus Hagdorn
+#type: Bilder
+images/fasching1.jpg  
+images/fasching2.jpg  
+images/fasching3.jpg
