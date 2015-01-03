@@ -62,7 +62,6 @@ nav select {
 nav ul li {
     display: inline;
     float: left;
-    margin-bottom: 10px; 
     position: relative;
 }
 nav ul li a,
