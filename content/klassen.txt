@@ -1,4 +1,4 @@
-#title: Über uns
+#title: Klassen
 #author: Margaret Ries
 Liebe Eltern,
 

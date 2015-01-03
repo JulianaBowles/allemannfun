@@ -1,5 +1,6 @@
 index.html: Home
-ueberuns.html: Über uns
+: Über uns
+klassen.html: Über uns/Klassen
 geschichte.html: Über uns/Geschichte
 kalender.html: Über uns/Kalender
 : Bilder
@@ -7,5 +8,6 @@ fasching.html: Bilder/Fasching
 sommer2014.html: Bilder/Sommer
 weihnachten2014.html: Bilder/Weihnachten
 links.html: Links
-kontakte.html: Kontakte
+: Kontakte
+kontakte.html: Kontakte/Komitee
 anmeldung.html: Kontakte/Anmeldung
