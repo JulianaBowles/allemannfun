@@ -1,6 +1,6 @@
 index.html: Home
 : Über uns
-klassen.html: Über uns/Klassen
+klassen.html: Über uns/Unterricht
 geschichte.html: Über uns/Geschichte
 kalender.html: Über uns/Kalender
 : Bilder
