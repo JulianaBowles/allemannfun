@@ -13,7 +13,7 @@ import string
 import Image
 
 WIDTHS = {'l':800,'m':400,'s':200}
-MEDIA = {'l':'1000px','m':'480'}
+MEDIA = {'l':'1000px','m':'480px'}
 
 class MenuItem(object):
     def __init__(self,name="",target="#"):        
@@ -139,9 +139,10 @@ class AllemannFun(object):
                             im.save(outim, "JPEG")
                     for w in MEDIA:
                         res += '<source srcset="%s" media="(min-width: %s)">\n'%(os.path.join("images",bname+'_'+w+'.jpg'),MEDIA[w])
-                    res += '<img srcset="%s" alt="%s">\n'%(os.path.join("images",bname+'_s'+'.jpg'),caption)
+                    res += '<img src="%s" alt="%s">\n'%(os.path.join("images",bname+'_s'+'.jpg'),caption)
                         
                     res += "</picture>\n</div>\n"
+            res+="<div>\n"
         else:
             md = markdown.Markdown(extensions=['squareul'])
             res = md.convert(data['contents'])
@@ -256,8 +257,8 @@ if __name__ == '__main__':
                 page = AllemannFun(t,menu=menu.unicode(),template=args.template,outdir=args.output_dir)
             with open(os.path.join(args.output_dir,h),'w') as out:
                 bs = BeautifulSoup(str(page))
-                out.write(bs.prettify())
-                #out.write(str(page))
+                #out.write(bs.prettify())
+                out.write(str(page))
 
     #with codecs.open('test2.html','w', encoding='utf-8') as out:
     #    out.write(menu.unicode())
