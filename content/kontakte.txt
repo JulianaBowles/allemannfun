@@ -1,6 +1,6 @@
 #title: Kontakte
 #author: Magnus Hagdorn
-Das Elternkommitee besteht zur Zeit aus:
+Das Elternkomitee besteht zur Zeit aus:
 
 * **Vorstand (Chair)**: Jürgen Haas
 * **Schriftführer (Secretary)**: Petra Eisenhardt
