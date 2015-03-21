@@ -1,8 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--[if lt IE 7 ]><html class="ie ie6" lang="de"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="de"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="de"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="de"> <!--<![endif]-->
+<!DOCTYPE html>
   <HEAD>
     <TITLE>Allemann Fun - deutsche Samstagsschule - $title</TITLE>
     <link rel="icon" 
@@ -29,7 +25,7 @@
     <div class="band header">
       <header class="container">
 	<div class="sixteen columns">
-	  <p align="center"><img src="images/AF-logo-deutsch.png"></p>
+	  <p align="center"><img src="images/AF-logo-deutsch.png" alt="Allemannfun Logo"></p>
 	  <p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
 	</div>
        </header> <!-- end container -->
