@@ -1,4 +1,4 @@
-#title: Sommer Ausflug 2014
+#title: Sommerausflug 2014
 #author: Magnus Hagdorn
 #type: Bilder
 images/sommer2014_1.jpg
