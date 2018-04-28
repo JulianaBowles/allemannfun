@@ -7,10 +7,10 @@ import argparse
 import markdown
 import codecs
 from collections import OrderedDict
-from BeautifulSoup import BeautifulSoup
+#from BeautifulSoup import BeautifulSoup
 import calendar
 import string
-import Image
+from PIL import Image
 
 WIDTHS = {'l':800,'m':400,'s':200}
 MEDIA = {'l':'1000px','m':'480px'}
@@ -256,7 +256,7 @@ if __name__ == '__main__':
             else:
                 page = AllemannFun(t,menu=menu.unicode(),template=args.template,outdir=args.output_dir)
             with open(os.path.join(args.output_dir,h),'w') as out:
-                bs = BeautifulSoup(str(page))
+                #bs = BeautifulSoup(str(page))
                 #out.write(bs.prettify())
                 out.write(str(page))
 
