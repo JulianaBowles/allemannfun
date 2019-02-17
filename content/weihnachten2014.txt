@@ -1,8 +1,184 @@
-#title: Weihnachtsfeier 2014
-#author: Magnus Hagdorn
-#type: Bilder
-images/weihnachten2014_1.jpg
-images/weihnachten2014_2.jpg
-images/weihnachten2014_3.jpg
-images/weihnachten2014_4.jpg
-images/weihnachten2014_5.jpg
+<!DOCTYPE html>
+  <HEAD>
+    <TITLE>Allemann Fun - deutsche Samstagsschule - </TITLE>
+    <link rel="icon" 
+      type="image/png" 
+      href="images/aficon.png">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+      <!--[if lt IE 9]>
+          <script src="scripts/html5shiv.js"></script>
+	  <![endif]-->
+      <script>
+	// Picture element HTML5 shiv
+	document.createElement( "picture" );
+      </script>
+      <script src="picturefill.js" async></script>
+  </HEAD>
+  <BODY>
+    <div class="band header">
+      <header class="container">
+	<div class="sixteen columns">
+	  <p align="center"><img src="images/AF-logo-deutsch.png" alt="Allemannfun Logo"></p>
+	  <p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
+	</div>
+       </header> <!-- end container -->
+    </div> <!--end band-->
+
+      <div class="band navigation">
+	<nav class="container">
+	  <div class="sixteen columns">
+   	    <ul>
+<li>
+<a href="../content/weihnachten2014.txt">xxx</a>
+</li>
+</ul>
+<form name="menuform">
+<select name="menu2" onChange="top.location.href = this.form.menu2.options[this.form.menu2.selectedIndex].value; return false;">
+<option value="" selected="selected">Goto ...</option>
+<option value="../content/weihnachten2014.txt" > xxx</option>
+</select></form>
+
+	  </div>
+	</nav> <!-- end container -->
+      </div> <!--end band-->
+
+      <div class="band content">
+	<div class="container">
+	  <div class="sixteen columns content">
+	    <h1></h1>
+            <hr class="large" />
+	    <!DOCTYPE html>
+<HEAD>
+<TITLE>Allemann Fun - deutsche Samstagsschule - Weihnachtsfeier 2014</TITLE>
+<link rel="icon"
+type="image/png"
+href="images/aficon.png">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Magnus Hagdorn">
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS -->
+<link rel="stylesheet" href="stylesheets/base.css">
+<link rel="stylesheet" href="stylesheets/skeleton.css">
+<link rel="stylesheet" href="stylesheets/layout.css">
+<!--[if lt IE 9]>
+<script src="scripts/html5shiv.js"></script>
+<![endif]-->
+<script>
+// Picture element HTML5 shiv
+document.createElement( "picture" );
+</script>
+<script src="picturefill.js" async></script>
+</HEAD>
+<BODY>
+<div class="band header">
+<header class="container">
+<div class="sixteen columns">
+<p align="center"><img src="images/AF-logo-deutsch.png" alt="Allemannfun Logo"></p>
+<p align="center">Mitglied im Verband deutscher Samstagsschulen</p>
+</div>
+</header> <!-- end container -->
+</div> <!--end band-->
+
+<div class="band navigation">
+<nav class="container">
+<div class="sixteen columns">
+<ul>
+<li>
+<a href="../content/weihnachten2014.txt">xxx</a>
+</li>
+</ul>
+<form name="menuform">
+<select name="menu2" onChange="top.location.href = this.form.menu2.options[this.form.menu2.selectedIndex].value; return false;">
+<option value="" selected="selected">Goto ...</option>
+<option value="../content/weihnachten2014.txt" > xxx</option>
+</select></form>
+
+</div>
+</nav> <!-- end container -->
+</div>
+
+<!--end band-->
+
+<div class="band content">
+<div class="container">
+<div class="sixteen columns content">
+<h1>Weihnachtsfeier 2014</h1>
+<hr class="large" />
+</div>
+<div align ="center" class="sixteen columns">
+<picture>
+<source srcset="images/weihnachten2014_1_m.jpg" media="(min-width: 480px)">
+<source srcset="images/weihnachten2014_1_l.jpg" media="(min-width: 1000px)">
+<img src="images/weihnachten2014_1_s.jpg" alt="">
+</picture>
+</div>
+<div align ="center" class="sixteen columns">
+<picture>
+<source srcset="images/weihnachten2014_2_m.jpg" media="(min-width: 480px)">
+<source srcset="images/weihnachten2014_2_l.jpg" media="(min-width: 1000px)">
+<img src="images/weihnachten2014_2_s.jpg" alt="">
+</picture>
+</div>
+<div align ="center" class="sixteen columns">
+<picture>
+<source srcset="images/weihnachten2014_3_m.jpg" media="(min-width: 480px)">
+<source srcset="images/weihnachten2014_3_l.jpg" media="(min-width: 1000px)">
+<img src="images/weihnachten2014_3_s.jpg" alt="">
+</picture>
+</div>
+<div align ="center" class="sixteen columns">
+<picture>
+<source srcset="images/weihnachten2014_4_m.jpg" media="(min-width: 480px)">
+<source srcset="images/weihnachten2014_4_l.jpg" media="(min-width: 1000px)">
+<img src="images/weihnachten2014_4_s.jpg" alt="">
+</picture>
+</div>
+<div align ="center" class="sixteen columns">
+<picture>
+<source srcset="images/weihnachten2014_5_m.jpg" media="(min-width: 480px)">
+<source srcset="images/weihnachten2014_5_l.jpg" media="(min-width: 1000px)">
+<img src="images/weihnachten2014_5_s.jpg" alt="">
+</picture>
+</div>
+<div>
+
+</div>
+</div> <!-- end container -->
+</div>
+
+<!--end band-->
+
+<div class="band footer">
+<div class="container">
+<div class="sixteen columns">
+<p align="center">last edited by Magnus Hagdorn Sat Apr 28 09:48:01 2018</p>
+</div>
+</div> <!-- end container -->
+</div>
+
+<p><!--end band-->
+<div class="resize"></div>
+</BODY>
+</HTML></p>
+	  </div>
+	</div> <!-- end container -->
+      </div> <!--end band-->
+
+      <div class="band footer">
+	<div class="container">
+	  <div class="sixteen columns">
+	    <p align="center">last edited by  Sat Feb 16 18:02:40 2019</p>
+	  </div>
+	</div> <!-- end container -->
+      </div> <!--end band-->
+      <div class="resize"></div>
+  </BODY>
+</HTML>
