@@ -22,5 +22,17 @@ mput *.html (for multiple files)
 
 put for individual files 
 
-Git:
+Git: (use git status to check status if desired)
+after changing files add them,
+eg. 
+git add content/*.txt
+git add README.md
+
+then do commit
+git commit -m "what has changed"
+
+then push it up
+
+git push
+
 
