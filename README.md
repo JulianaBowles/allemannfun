@@ -10,4 +10,17 @@ links to software used
 
 in content directory
 python ../code/allemannfun.py menu.txt
-then ftp site directory
+
+ftp from within the site directory (or use fileZilla)
+
+ftp ftp.allemannfun.org.uk
+
+username: web@allemannfun.org.uk
+password:
+
+mput *.html (for multiple files)
+
+put for individual files 
+
+Git:
+
